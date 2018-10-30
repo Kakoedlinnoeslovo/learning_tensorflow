@@ -1,0 +1,3 @@
+2018-10-30 11:28:59,464 root  INFO     Start building CNN
+2018-10-30 12:26:02,593 root  INFO     Start building CNN
+2018-10-30 12:26:02,594 root  INFO     Input tensor shape: (?, 1, 32, ?)

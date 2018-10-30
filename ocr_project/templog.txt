@@ -1,1 +1,0 @@
-2018-10-30 11:29:54,446 root  INFO     loading data

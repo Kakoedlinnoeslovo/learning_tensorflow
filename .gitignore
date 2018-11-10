@@ -3,4 +3,5 @@
 .ipynb_checkpoints/
 MNIST_data/
 MNIST-data/
-logs/nn_logs/
+logs/nn_logs/*
+logs/*

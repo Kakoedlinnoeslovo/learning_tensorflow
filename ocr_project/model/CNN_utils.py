@@ -9,9 +9,7 @@ def var_random(name, shape,
 
     variation = 2/(filters_in + filters_out)
     dev = math.sqrt(variation)
-    v = tf.get_variable(name,
-                        shape = shape,
-                        initializer=tf.random_normal(shape = shape,
+    v = tf.get_variable(name, initializer=tf.random_normal(shape = shape,
                                                      mean=0,
                                                      stddev=dev))
 
@@ -31,4 +29,12 @@ def ConvRelu(input, num_filters, filter_size, name):
         conv = tf.nn.conv2d(input = input, filter=conv_W, strides=(1,1,1,1), padding= "SAME")
 
         return tf.nn.relu(conv)
+
+
+def max_2x2pooling(incoming, name):
+    with tf.variable_scope(name):
+        return tf.nn.max_pool(incoming, ksize = (1,2,2,1), strides=(1,2,2,1), padding = "VALID")
+
+
+
 

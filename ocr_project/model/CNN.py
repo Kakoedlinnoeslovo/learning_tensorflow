@@ -6,7 +6,7 @@ import numpy as np
 import tensorflow as tf
 import logging
 Logger()
-from model.CNN_utils import ConvRelu
+from model.CNN_utils import ConvRelu, max_2x2pooling
 
 class CNN:
     def __init__(self):
@@ -18,8 +18,8 @@ class CNN:
         net = tf.transpose(input_tensor, perm = [0, 2, 3, 1])
         net = tf.add(net, (-128.0))
         net = tf.multiply(net, (1/128.0))
-
         net = ConvRelu(net, 64, (3, 3), "conv_1")
+        net = ma
 
 
 
